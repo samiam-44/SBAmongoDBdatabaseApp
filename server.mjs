@@ -2,6 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
+import driverRoutes from './routes/driverRoute.mjs';
 
 //Setups
 dotenv.config();
@@ -12,7 +13,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 connectDB();
 
-
+//ROUTES
+app.use('/api', driverRoutes);
 //Error handling middle ware
 app.use((err, _req, res, next) => {
     res.status(500).json({ msg: err.message });
