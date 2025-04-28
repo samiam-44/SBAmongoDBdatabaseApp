@@ -37,7 +37,7 @@ router.patch('/drivers/:id', async (req, res) => {
         { new: true } //Return updated driver
     );
     if (!updatedDriver) {
-        return res.status(404).json({ msg: 'Driver not found' }):
+        return res.status(404).json({ msg: 'Driver not found' });
     }
     res.status(200).json(updatedDriver); //Send updated driver
 
