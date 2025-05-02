@@ -14,7 +14,7 @@ router.post('/drivers', async (req, res) => {
 });
 
 //GET ALL druvers
-router.get('drivers', async (req, res) => {
+router.get('/drivers', async (req, res) => {
     const drivers = await Driver.find(); //Find all drivers
     res.status(200).json(drivers);
 });
