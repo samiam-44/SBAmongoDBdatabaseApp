@@ -3,7 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
 import driverRoutes from './routes/driverRoute.mjs';
-
+import vehicleRoutes from './routes/vehicleRoute.mjs'
 //Setups
 dotenv.config();
 const app = express();
@@ -15,6 +15,7 @@ connectDB();
 
 //ROUTES
 app.use('/api', driverRoutes);
+app.use('/api', vehicleRoutes);
 //Error handling middle ware
 app.use((err, _req, res, next) => {
     res.status(500).json({ msg: err.message });
