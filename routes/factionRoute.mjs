@@ -1,5 +1,5 @@
 import express from 'express';
-import Faction from '../models/Facton.mjs';
+import Faction from '../models/Faction.mjs';
 
 const router = express.Router();
 
