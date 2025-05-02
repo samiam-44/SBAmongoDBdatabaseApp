@@ -18,6 +18,10 @@ const factionSchema = new mongoose.Schema({
     type: String, 
     default: 'No motto provided.'
   },
+  alliedFactions: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Faction'
+  }]
 }, { timestamps: true }); // Adds createdAt and updatedAt fields
 
 // Creates and export the model
