@@ -14,7 +14,7 @@ const factionSchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  motto: { //Like the valhalla motto from the citdel
+  motto: { 
     type: String, 
     default: 'No motto provided.'
   },

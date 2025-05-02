@@ -20,7 +20,7 @@ app.use('/api', driverRoutes);
 app.use('/api', vehicleRoutes);
 app.use('/api', factionRoutes)
 //Error handling middle ware
-app.use((err, _req, res, next) => {
+app.use((err, _req, res, _next) => {
     res.status(500).json({ msg: err.message });
 })
 
@@ -28,5 +28,5 @@ app.use((err, _req, res, next) => {
 //Listners
 app.listen(PORT, () => {
     console.log(`Server running on PORT: ${PORT}`)
-})
+});
 
